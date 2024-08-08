@@ -25,5 +25,4 @@ phases:
       - echo Build completed on `date`
 
 artifacts:
-  files:
-    - '**/*'
+    files: imagedefinitions.json
