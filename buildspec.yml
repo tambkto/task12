@@ -8,9 +8,6 @@ env:
     IMAGE_TAG: "latest"                        # You can change this if needed
 
 phases:
-  install:
-    runtime-versions:
-      docker: 19
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
@@ -28,5 +25,4 @@ phases:
       - echo Build completed on `date`
 
 artifacts:
-  files:
-    - '**/*'
+    files: imagedefinitions.json
