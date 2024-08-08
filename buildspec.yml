@@ -5,7 +5,8 @@ env:
     AWS_REGION: "us-east-1"                  # e.g., us-west-2
     AWS_ACCOUNT_ID: "905418229977"      # e.g., 123456789012
     REPO_NAME: "ameera-app"                # e.g., ECR Repo Name
-    IMAGE_TAG: "latest"                        # You can change this if needed
+    IMAGE_TAG: "latest" 
+    ecs_container_name: "Amee-ecs-cluster"                       # You can change this if needed
 
 phases:
   pre_build:
@@ -24,7 +25,7 @@ phases:
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$REPO_NAME:$IMAGE_TAG
       - echo Build completed on `date`
       - echo Writing image definitions file...
-      - printf '[{"name":"'$ecs_container_name'","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"'$ecs_container_name'","imageUri":"%s"}]' $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$REPO_NAME:$IMAGE_TAG > imagedefinitions.json
 
 
 artifacts:
