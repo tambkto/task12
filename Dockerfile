@@ -5,8 +5,13 @@ FROM amazonlinux:2
 RUN yum install -y amazon-efs-utils python3 && \
     yum clean all
 
-# Copy a simple HTML file to the server directory
-COPY . /var/www/html/index.html
+# Create a directory for the web content
+RUN mkdir -p /var/www/html
+
+# Copy the HTML file to the server directory
+COPY index.html /var/www/html/
+COPY styles.css /var/www/html/
+COPY script.js /var/www/html/
 
 # Set the working directory
 WORKDIR /var/www/html
