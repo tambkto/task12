@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #9b59b6;
+    background-color: #c9a9dd;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -48,7 +48,7 @@ main {
 }
 
 #latest-posts h2 {
-    border-bottom: 2px solid #9b59b6;
+    border-bottom: 2px solid #c9a9dd;
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
@@ -63,17 +63,17 @@ article {
 
 article h3 {
     margin-top: 0;
-    color: #9b59b6;
+    color: #c9a9dd;
 }
 
 article a {
-    color: #9b59b6;
+    color: #c9a9dd;
     text-decoration: none;
     font-weight: bold;
 }
 
 #newsletter {
-    background-color: #9b59b6;
+    background-color: #c9a9dd;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -96,7 +96,7 @@ article a {
 #newsletter button {
     padding: 10px 20px;
     background-color: #fff;
-    color: #9b59b6;
+    color: #c9a9dd;
     border: none;
     border-radius: 5px;
     font-weight: bold;
